@@ -3,27 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio - Trang cá nhân</title>\
+    <title>Huỳnh Thiên Kim - Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <div class="card">
-        <div class="avatar-wrapper">
-        <!-- Thẻ hiển thị ảnh Avatar -->
-          <img src="avatar.jpg" alt="Avatar" class="avatar">
-        </div>
-        <h1>Xin chào, mình là Huỳnh Thiên Kim!</h1>
-        <p class="subtitle">Web Developer & Creative Learner</p>
-        <p class="bio">Chào mừng bạn đến với trang Portfolio cá nhân của mình. 
-       Đây là sản phẩm thực hành deploy website tĩnh lên internet.</p>
-        
-        <div class="skills">
-            <span class="badge">HTML5</span>
-            <span class="badge">CSS3</span>
-            <span class="badge">Git & GitHub</span>
-            <span class="badge">Web Deploy</span>
-        </div>
-    </div>
+    <!-- Thanh điều hướng & Nút Dark Mode -->
+    <header class="navbar">
+        <div class="logo">Thiên Kim.dev</div>
+        <nav>
+            <a href="#about">Giới thiệu</a>
+            <a href="#projects">Dự án</a>
+            <a href="#contact">Liên hệ</a>
+            <button id="theme-toggle" aria-label="Đổi giao diện Sáng/Tối">🌙 Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Phần 1: Giới thiệu (Giữ phong cách Pastel của bạn) -->
+        <section id="about" class="hero-card reveal">
+            <div class="avatar-wrapper">
+                <!-- Thay 'avatar.jpg' bằng đúng tên file ảnh của bạn -->
+                <img src="avatar.jpg" alt="Huỳnh Thiên Kim" class="avatar">
+            </div>
+            <h1>Xin chào, mình là Huỳnh Thiên Kim!</h1>
+            <p class="subtitle">Web Developer & Creative Learner</p>
+            <p class="bio">Chào mừng bạn đến với không gian sáng tạo của mình. Mình yêu thích việc xây dựng các giao diện web tinh tế, mượt mà và tối ưu trải nghiệm người dùng.</p>
+            <div class="skills">
+                <span class="badge sky">HTML5</span>
+                <span class="badge pink">CSS3 Grid</span>
+                <span class="badge sky">JavaScript</span>
+                <span class="badge pink">Git & Cloud Deploy</span>
+            </div>
+        </section>
+
+        <!-- Phần 2: Grid 6 Dự án (Responsive Mobile-First) -->
+        <section id="projects" class="section">
+            <h2 class="section-title reveal">Dự án tiêu biểu</h2>
+            <div class="projects-grid">
+                <article class="project-card reveal">
+                    <span class="tag sky">Web Design</span>
+                    <h3>01. Pastel Portfolio</h3>
+                    <p>Trang web giới thiệu cá nhân tích hợp Dark Mode, hiệu ứng cuộn trang và triển khai trên hạ tầng đám mây.</p>
+                </article>
+                <article class="project-card reveal">
+                    <span class="tag pink">Landing Page</span>
+                    <h3>02. Tiệm Bánh Ngọt</h3>
+                    <p>Giao diện giới thiệu thực đơn bánh thủ công với thiết kế Mobile-first tối ưu cho điện thoại.</p>
+                </article>
+                <article class="project-card reveal">
+                    <span class="tag sky">JavaScript App</span>
+                    <h3>03. Ứng dụng Quản lý Công việc</h3>
+                    <p>Công cụ ghi chú và theo dõi tiến độ học tập hàng ngày lưu trữ trực tiếp trên trình duyệt.</p>
+</article>
+                <article class="project-card reveal">
+                    <span class="tag pink">E-Commerce UI</span>
+                    <h3>04. Cửa hàng Phụ kiện</h3>
+                    <p>Giao diện giỏ hàng và bộ lọc sản phẩm sử dụng bố cục CSS Grid hiện đại.</p>
+                </article>
+                <article class="project-card reveal">
+                    <span class="tag sky">API Integration</span>
+                    <h3>05. Dự báo Thời tiết</h3>
+                    <p>Tra cứu nhiệt độ và chất lượng không khí theo thời gian thực tại các thành phố lớn.</p>
+                </article>
+                <article class="project-card reveal">
+                    <span class="tag pink">Blog Cá Nhân</span>
+                    <h3>06. Nhật ký Lập trình</h3>
+                    <p>Nơi chia sẻ kiến thức về HTML, CSS, Git và kinh nghiệm triển khai website thực tế.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Phần 3: Form liên hệ Formspree (Chỉ dùng HTML) -->
+        <section id="contact" class="section reveal">
+            <h2 class="section-title">Liên hệ với mình</h2>
+            <div class="contact-card">
+                <!-- Thay YOUR_FORM_ID bằng mã bạn tạo miễn phí trên formspree.io -->
+                <form action="https://formspree.io/f/mqpqgelg" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" placeholder="Nhập tên của bạn..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Lời nhắn</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Bạn muốn trao đổi về dự án nào?" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Gửi tin nhắn ✨</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (Có biểu tượng Cloudflare theo yêu cầu đề bài) -->
+    <footer class="footer">
+        <p>© 2026 Huỳnh Thiên Kim. Protected & Accelerated by <strong>☁️ Cloudflare</strong></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
